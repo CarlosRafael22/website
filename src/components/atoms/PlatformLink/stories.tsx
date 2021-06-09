@@ -19,15 +19,3 @@ Default.args = {
     platform: 'linkedin',
     link: 'https://dev.to/carlosrafael22'
 }
-
-Default.parameters = {
-    backgrounds: {
-        default: 'default',
-        values: [
-          {
-            name: 'default',
-            value: '#F3F3F3',
-          },
-        ],
-      },
-}
