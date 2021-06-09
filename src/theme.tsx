@@ -13,6 +13,34 @@ const breakpoints = createBreakpoints({
 const theme = extendTheme({
   colors: {
     black: '#16161D',
+    primary: '#31393C',
+    secondary: {
+        default: '#0078FF',
+        hover: '#0151AC'
+    },
+    bgGray: '#F3F3F3',
+    bgWhite: '#FFFFFF',
+    yellow: {
+        default: '#FFBA00',
+        hover: '#D39B01'
+    },
+    red: {
+        default: '#FF1400',
+        hover: '#CB1000'
+    },
+    green: {
+        default: '#1EBB48',
+        hover: '#008D26'
+    },
+    lightGray: {
+        default: '#C4C4C4',
+        hover: '#EEEEEE',
+        disabled: '#9E9E9E'
+    },
+    lightBlue: {
+        default: '#0CD6BE',
+        hover: '#00AD98'
+    }
   },
   fonts: {
     heading: 'Montserrat',
