@@ -23,7 +23,7 @@ const PlatformLink = ({ platform }: PlatformLinkProps) => {
             backgroundColor='white'
             borderRadius='50%'
             justifyContent='center' alignItems='center'
-            _hover={{ backgroundColor: 'lightGray.hover' }}
+            _hover={{ boxShadow: '0 0 0 5px #EEEEEE' }}
             >
             <FontAwesomeIcon icon={faLinkedin} size='2x' />
         </Flex>
