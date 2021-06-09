@@ -4,22 +4,23 @@ import theme from '../src/theme'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  backgrounds: {
+    default: 'default',
+    values: [
+        {
+            name: 'default',
+            value: '#F3F3F3'
+        }
+    ]
+  }
 }
 
-// export const decorators = [
-//   (Story) => (
-//       <ChakraProvider resetCSS theme={theme}>
-//         <Story />
-//       </ChakraProvider>
-//   ),
-// ]
-
-const withChakra = (StoryFn) => {
+const withChakra = (Story) => {
 
   return (
     <ChakraProvider theme={theme} resetCSS>
       <div id="story-wrapper" style={{ minHeight: "100vh" }}>
-        <StoryFn />
+        <Story />
       </div>
     </ChakraProvider>
   )
