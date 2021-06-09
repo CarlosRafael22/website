@@ -3,7 +3,7 @@ import { faLinkedin, faTwitter, faDev, faGithub } from '@fortawesome/free-brands
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-type IconsOptions = 'linkedin' | 'dev' | 'twitter' | 'github' | 'email'
+export type IconsOptions = 'linkedin' | 'dev' | 'twitter' | 'github' | 'email'
 
 export type PlatformLinkProps =  {
     platform: IconsOptions,
