@@ -1,6 +1,8 @@
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Text, useBreakpointValue } from '@chakra-ui/react'
 
 const Footer = () => {
+    const textSize = useBreakpointValue({ base: 'b3', md: 'b2' })
+
     return (
         <Flex
             h='100px' w='100vw'
@@ -8,7 +10,7 @@ const Footer = () => {
             position='absolute' bottom={0}
             bgColor='bgWhite'  
         >
-            <Text variant='body2'>2021 Rafael Leitão - Created with Next.JS and Chakra-UI</Text>
+            <Text variant={textSize}>2021 Rafael Leitão - Created with Next.JS and Chakra-UI</Text>
         </Flex>
     )
 }
