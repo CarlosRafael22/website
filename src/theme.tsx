@@ -69,11 +69,14 @@ const theme = extendTheme({
     },
     Text: {
       variants: {
-        body1: {
+        b1: {
           fontSize: 'md', fontWeight: '400'
         },
-        body2: {
+        b2: {
           fontSize: 'md', fontWeight: '300'
+        },
+        b3: {
+          fontSize: 'sm', fontWeight: '300'
         }
       }
     }
