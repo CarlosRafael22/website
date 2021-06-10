@@ -5,9 +5,10 @@ const Footer = () => {
 
     return (
         <Flex
-            h='100px' w='100vw'
+            h='10vh' w='100vw'
             justifyContent='center' alignItems='center'
-            bgColor='bgWhite'  
+            bgColor='bgWhite'
+            padding='1rem'
         >
             <Text variant={textSize}>2021 Rafael Leitão - Created with Next.JS and Chakra-UI</Text>
         </Flex>
