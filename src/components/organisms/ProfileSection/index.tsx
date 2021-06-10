@@ -5,9 +5,7 @@ import PlatformLinkSection from '../../molecules/PlatformLinkSection'
 const ProfileSection = () => {
     return (
         <Grid gap='1.5rem'>
-            <Flex justifyContent='center'>
-                <ProfileInfo />
-            </Flex>
+            <ProfileInfo />
             <PlatformLinkSection />
         </Grid>
     )
