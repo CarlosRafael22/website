@@ -12,7 +12,7 @@ const NavLink = ({ title }: NavLinkProps) => (
 const Header = () => {
     return (
         <Flex
-            h='100px' w='100vw'
+            h='10vh' w='100vw'
             bgColor='bgWhite'
         >
             <Flex
@@ -22,7 +22,7 @@ const Header = () => {
             >
                 <Heading variant='h4'>Rafael Leitão</Heading>
                 <Flex>
-                    {['Now', 'About', 'Blog'].map(title => <NavLink title={title} />)}
+                    {['Now', 'About', 'Blog'].map((title, index) => <NavLink title={title} key={index} />)}
                 </Flex>
             </Flex>
         </Flex>
