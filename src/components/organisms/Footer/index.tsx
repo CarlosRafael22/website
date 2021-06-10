@@ -10,7 +10,7 @@ const Footer = () => {
             bgColor='bgWhite'
             padding='1rem'
         >
-            <Text variant={textSize}>2021 Rafael Leitão - Created with Next.JS and Chakra-UI</Text>
+            <Text variant={textSize}>Rafael Leitão, 2021 - Created with Next.JS and Chakra-UI</Text>
         </Flex>
     )
 }
