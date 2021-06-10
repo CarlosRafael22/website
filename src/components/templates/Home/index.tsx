@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Box>
             <Header />
-            <Flex w='100vw' h='100vh' bgColor='bgGray' justifyContent='center' alignItems='center'>
+            <Flex w='100vw' h='80vh' bgColor='bgGray' justifyContent='center' alignItems='center'>
                 <ProfileSection />
             </Flex>
             <Footer />
