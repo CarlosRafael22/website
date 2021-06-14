@@ -1,4 +1,5 @@
-import { Flex, Text, Heading, Link } from '@chakra-ui/react'
+import { Flex, Text, Heading, Link as ChakraLink } from '@chakra-ui/react'
+import Link from 'next/link'
 
 type NavLinkProps = {
     title: string,
@@ -6,7 +7,11 @@ type NavLinkProps = {
 }
 
 const NavLink = ({ title }: NavLinkProps) => (
-    <Link marginX='1rem'><Text variant='h2'>{title}</Text></Link>
+    <ChakraLink marginX='1rem'>
+        <Link href={`/${title}`}>
+            <Text variant='h2'>{title}</Text>
+        </Link>
+    </ChakraLink>
 )
 
 const Header = () => {
@@ -22,7 +27,7 @@ const Header = () => {
             >
                 <Heading variant='h4'>Rafael Leitão</Heading>
                 <Flex>
-                    {['Now', 'About', 'Blog'].map((title, index) => <NavLink title={title} key={index} />)}
+                    {['now', 'about', 'blog'].map((title, index) => <NavLink title={title} key={index} />)}
                 </Flex>
             </Flex>
         </Flex>
