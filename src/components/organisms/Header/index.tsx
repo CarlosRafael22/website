@@ -6,10 +6,12 @@ type NavLinkProps = {
     link?: string
 }
 
+const getCapitalizedTitle = (title: string) => title.charAt(0).toUpperCase() + title.slice(1)
+
 const NavLink = ({ title }: NavLinkProps) => (
     <ChakraLink marginX='1rem'>
         <Link href={`/${title}`}>
-            <Text variant='h2'>{title}</Text>
+            <Text variant='h2'>{getCapitalizedTitle(title)}</Text>
         </Link>
     </ChakraLink>
 )
@@ -25,7 +27,9 @@ const Header = () => {
                 margin='0 auto'
                 justifyContent='space-between' alignItems='center'    
             >
-                <Heading variant='h4'>Rafael Leitão</Heading>
+                <Link href='/'>
+                    <a><Heading variant='h4'>Rafael Leitão</Heading></a>
+                </Link>                
                 <Flex>
                     {['now', 'about', 'blog'].map((title, index) => <NavLink title={title} key={index} />)}
                 </Flex>
