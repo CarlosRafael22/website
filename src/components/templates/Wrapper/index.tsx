@@ -3,14 +3,15 @@ import Header from '../../organisms/Header'
 import Footer from '../../organisms/Footer'
 
 export type WrapperProps = {
-    children: React.ReactNode
+    children: React.ReactNode,
+    [key: string]: any
 }
 
-const Wrapper = ({ children }: WrapperProps) => {
+const Wrapper = ({ children, ...props }: WrapperProps) => {
     return (
         <Box>
             <Header />
-            <Flex w='100vw' minHeight='80vh' bgColor='bgGray' justifyContent='center' alignItems='center'>
+            <Flex w='100vw' minHeight='80vh' bgColor='bgGray' justifyContent='center' alignItems='center' {...props}>
                 {children}
             </Flex>
             <Footer />
