@@ -73,10 +73,13 @@ const theme = extendTheme({
           fontSize: 'md', fontWeight: '400'
         },
         b2: {
-          fontSize: 'md', fontWeight: '300'
+          fontSize: 'md', fontWeight: '300', marginY: '1rem'
         },
         b3: {
           fontSize: 'sm', fontWeight: '300'
+        },
+        code: {
+          backgroundColor: '#08090a', color: 'white', marginY: 0, paddingX: '1rem'
         }
       }
     }
