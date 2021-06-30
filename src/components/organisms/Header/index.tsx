@@ -31,7 +31,7 @@ const Header = () => {
                     <a><Heading variant='h4'>Rafael Leitão</Heading></a>
                 </Link>                
                 <Flex>
-                    {['now', 'about', 'blog'].map((title, index) => <NavLink title={title} key={index} />)}
+                    {['blog'].map((title, index) => <NavLink title={title} key={index} />)}
                 </Flex>
             </Flex>
         </Flex>
