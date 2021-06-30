@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Badge, Flex } from '@chakra-ui/react'
 import Image from 'next/image'
+import Tag from '../../atoms/Tag'
 
 export type BlogPostHeaderProps = {
     title: string,
@@ -25,7 +26,7 @@ const BlogPostHeader = ({title, date, tags, coverImage}: BlogPostHeaderProps) =>
                 <Flex marginTop='0.5rem' flexDirection={['column', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
                     <Flex>
                         {tags.map((tag, index) => (
-                            <Badge colorScheme='green' h='max-content' marginRight='0.5rem' verticalAlign='center' key={index}>{tag}</Badge>
+                            <Tag text={tag} key={index} />
                         ))}
                     </Flex>
                     <Text alignSelf='flex-end' marginY='0.5rem'>Published on: {dateWithoutWeekDay}</Text>
