@@ -82,6 +82,13 @@ const theme = extendTheme({
           backgroundColor: '#08090a', color: 'white', marginY: 0, paddingX: '1rem'
         }
       }
+    },
+    Link: {
+      variants: {
+        default: {
+          color: 'secondary.default', textDecoration: 'underline', _hover: { backgroundColor: 'lightBlue.default' }
+        }
+      }
     }
   }
 })
