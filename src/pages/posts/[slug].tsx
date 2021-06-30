@@ -1,9 +1,10 @@
 import { GraphQLClient, gql } from 'graphql-request'
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import WrapperTemplate from '../../components/templates/Wrapper'
 import { components } from '../../components/blog'
+import BlogPostHeader from '../../components/organisms/BlogPostHeader'
 
 const graphCMS = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckpwthb6qv9rh01z6508r5114/master')
 
@@ -43,9 +44,9 @@ export async function getStaticProps({ params }) {
         slug: params.slug
     })
 
-    console.log('NO STATIC: ', post.content.markdown)
+    // console.log('NO STATIC: ', post.content.markdown)
     const mdxSource = await serialize(post.content.markdown)
-    console.log('SOURCE MDX: ', mdxSource)
+    // console.log('SOURCE MDX: ', mdxSource)
 
     return {
         props: {
@@ -64,7 +65,7 @@ export async function getStaticPaths() {
             }
         }
     `)
-    console.log('PATTAHHHHHAS: ', posts)
+    // console.log('PATTAHHHHHAS: ', posts)
     return {
         paths: posts.map(({ slug }) => ({
             params: { slug }
@@ -73,12 +74,17 @@ export async function getStaticPaths() {
     }
 }
 
+
 const BlogPost = ({ post, mdxSource }) => {
-    console.log('POSTSSS: ', post)
-    console.log('MDX: ', mdxSource)
+    // console.log('POSTSSS: ', post)
+    // console.log('MDX: ', mdxSource)
+
+    const { coverImage, title, date, tags } = post
+    const headerProps = { title, date, tags, coverImage }
     return (
         <WrapperTemplate flexDirection='column'>
-            <Box w='60vw'>
+            <Box w={['100vw', '50vw']} marginBottom='5rem' paddingX={['0.5rem', 0]}>
+                <BlogPostHeader {...headerProps} />
                 <MDXRemote {...mdxSource} components={components} />
             </Box>
         </WrapperTemplate>
