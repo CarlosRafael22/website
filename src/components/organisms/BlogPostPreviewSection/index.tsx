@@ -8,7 +8,7 @@ export type BlogPostPreviewSectionProps = {
 const BlogPostPreviewSection = ({ posts }: BlogPostPreviewSectionProps) => {
 
     return (
-        <Box>
+        <Box paddingX={['1rem', 0]}>
             {
                 posts.map((post, index) => (
                     <BlogPostPreview {...post} key={index} />
