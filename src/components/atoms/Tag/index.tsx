@@ -2,7 +2,7 @@ import { Badge } from '@chakra-ui/react'
 
 export type TagProps = {
     text: string,
-    key?: string
+    key?: string | number
 }
 
 const Tag = ({text, key}: TagProps) => (
