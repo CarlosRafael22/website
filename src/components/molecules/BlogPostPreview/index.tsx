@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Badge, Flex } from '@chakra-ui/react'
 import Link from 'next/link'
+import BlogPostMetaData from '../BlogPostMetaData'
 
 export type BlogPostPreviewProps = {
     title: string,
@@ -12,19 +13,12 @@ export type BlogPostPreviewProps = {
 const BlogPostPreview = ({ title, excerpt, date, slug, tags }: BlogPostPreviewProps) => {
 
     return (
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/posts/${slug}`}>
             <a>
-            <Box w='500px' borderBottom='1px solid #FFFFFF' paddingBottom='1rem'>
+            <Box w={['100%', '600px']} paddingY='1.5rem'>
                 <Heading variant='h3' marginBottom='0.5rem'>{title}</Heading>
                 <Text variant='b3' marginBottom='0.5rem'>{excerpt}</Text>
-                <Flex>
-                    <Flex marginRight='1rem'>
-                        {tags.map((tag, index) => (
-                            <Badge colorScheme='green' marginRight='0.5rem' verticalAlign='center' key={index}>{tag}</Badge>
-                        ))}
-                    </Flex>
-                    <Text>{date}</Text>
-                </Flex>
+                <BlogPostMetaData tags={tags} date={date} type='postPreview' />
             </Box>
             </a>
         </Link>
