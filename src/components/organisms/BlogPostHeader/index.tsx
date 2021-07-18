@@ -12,7 +12,7 @@ export type BlogPostHeaderProps = {
 const BlogPostHeader = ({title, date, tags, coverImage}: BlogPostHeaderProps) => {
     return (
         <Box w={['100vw', '50vw']}>
-            <Image src={coverImage.url} alt={coverImage.fileName} width='800' height='300' />
+            <Image src={coverImage.url} alt={coverImage.fileName} width='800' height='400' />
             <Box marginY='1rem'>
                 <Heading variant='h1'>{title}</Heading>
                 <BlogPostMetaData tags={tags} date={date} type='postHeader' />
